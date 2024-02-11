@@ -1,0 +1,13 @@
+apt-get update && apt-get install qemu-system -y
+wget https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso
+
+qemu-img create -f raw windows.img 10G
+qemu-system-x86_64 \
+  -m 6G \
+  -cpu host \
+  -enable-kvm \
+  -boot order=d \
+  -drive file=windows.iso,media=cdrom \
+  -drive file=windows.img,format=raw,if=virtio \
+  -drive file=virtio-win.iso,media=cdrom \
+  -vnc :80
