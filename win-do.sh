@@ -3,20 +3,22 @@
 # 
 #
 echo "Pilih titit yang ingin di install"
-echo "	1) Windows 2019(Default)"
-echo "	2) Windows 10 Super Lite SF"
-echo "	3) Windows 10 Super Lite MF"
-echo "	4) Windows 10 Super Lite CF"
-echo "	5) Pakai link gz mu sendiri"
+echo "	1) Windows 2012 Server (Default)"
+echo "	2) Windows 2012 R2"
+echo "	3) Windows 2016"
+echo "	4) Windows 2019"
+echo "	5) Windows 2022"
+echo "	6) Pakai link gz mu sendiri"
 
 read -p "Pilih [1]: " PILIHOS
 
 case "$PILIHOS" in
-	1|"") PILIHOS="https://pub-96a3141a1f5b4b3ca15bbd7b03ad1f25.r2.dev/windows2019.gz";;
-	2) PILIHOS="https://master.dl.sourceforge.net/project/manyod/wedus10lite.gz?viasf=1";;
-	3) PILIHOS="https://download1582.mediafire.com/lemxvneeredgyBT5P6YtAU5Dq-mikaH29djd8VnlyMcV1iM_vHJzYCiTc8V3PQkUslqgQSG0ftRJ0X2w3t1D7T4a-616-phGqQ2xKCn8894r0fdV9jKMhVYKH8N1dXMvtsZdK6e4t9F4Hg66wCzpXvuD_jcRu9_-i65_Kbr-HeW8Bw/gcxlheshfpbyigg/wedus10lite.gz";;
-	4) PILIHOS="https://umbel.my.id/wedus10lite.gz";;
- 	5) read -p "Masukkan Link GZ mu : " PILIHOS;;
+	1|"") PILIHOS="http://mirror.softaculous.com/virtualizor/templates/windows-2012server.img.gz";;
+	2) PILIHOS="http://mirror.softaculous.com/virtualizor/templates/windows-2012r2.img.gz";;
+	3) PILIHOS="http://mirror.softaculous.com/virtualizor/templates/windows-2016.img.gz";;
+	4) PILIHOS="http://mirror.softaculous.com/virtualizor/templates/windows-2019.img.gz";;
+ 	5) PILIHOS="http://mirror.softaculous.com/virtualizor/templates/windows-2022.img.gz";;
+ 	6) read -p "Masukkan Link GZ mu : " PILIHOS;;
 	*) echo "pilihan salah"; exit;;
 esac
 
