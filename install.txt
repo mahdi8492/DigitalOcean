@@ -14,3 +14,7 @@ qemu-system-x86_64 \
   -drive file=windows.img,format=raw,if=virtio \
   -drive file=virtio-win.iso,media=cdrom \
   -vnc :80
+
+python3 -m http.server
+
+wget -O- --no-check-certificate http://104.248.249.87:8000/windows2012r2.img.gz | gunzip | dd of=/dev/vda
