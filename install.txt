@@ -1,6 +1,6 @@
 Help : https://gist.github.com/ajxchapman/187f8f5220cfc15f703e0019a8fc1f2a
 iso : https://www.microsoft.com/en-us/evalcenter/download-windows-server-2012-r2 
-
+RDP PORT https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/change-listening-port
 
 apt-get update && apt-get install qemu-system -y
 wget https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso
@@ -18,3 +18,4 @@ qemu-system-x86_64 \
 python3 -m http.server
 
 wget -O- --no-check-certificate http://104.248.249.87:8000/windows2012r2.img.gz | gunzip | dd of=/dev/vda
+
