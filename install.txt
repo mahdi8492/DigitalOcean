@@ -1,3 +1,5 @@
+Windows 2012 PASSWORD : admin@123
+
 Help : https://gist.github.com/ajxchapman/187f8f5220cfc15f703e0019a8fc1f2a
 iso : https://www.microsoft.com/en-us/evalcenter/download-windows-server-2012-r2 
 RDP PORT https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/change-listening-port
