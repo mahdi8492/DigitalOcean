@@ -17,5 +17,13 @@ qemu-system-x86_64 \
 
 python3 -m http.server
 
+
+Install the following drivers from the virtio-win ISO
+
+    f:\NetKvm\w10\amd64
+    f:\viostor\w10\amd64
+
+
+
 wget -O- --no-check-certificate http://104.248.249.87:8000/windows2012r2.img.gz | gunzip | dd of=/dev/vda PASSWORD : admin@123
 
