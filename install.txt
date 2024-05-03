@@ -29,4 +29,6 @@ Install the following drivers from the virtio-win ISO
 
 wget -O- --no-check-certificate http://104.248.249.87:8000/windows2012r2.img.gz | gunzip | dd of=/dev/vda PASSWORD : admin@123
 
-wget -O- --no-check-certificate http://46.101.118.13/windows.img | dd of=/dev/vda
+wget -O- --no-check-certificate http://46.101.118.13/windows.img | dd of=/dev/vda bs=4M status=progress
+
+
