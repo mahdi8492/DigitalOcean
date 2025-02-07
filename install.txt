@@ -27,12 +27,18 @@ Install the following drivers from the virtio-win ISO
 
 
 
-wget -O- --no-check-certificate http://104.248.249.87:8000/windows2012r2.img.gz | gunzip | dd of=/dev/vda PASSWORD : admin@123
+wget -O- --no-check-certificate http://104.248.249.87:8000/windows2012r2.img.gz | gunzip | dd of=/dev/vda
 
 netsh interface ip set address "connection name" static <IP Address> <Net Mask> <Default Gateway>
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
 
+
 wget -O- --no-check-certificate http://46.101.118.13/windows.img | dd of=/dev/vda bs=4M status=progress
 
+PASSWORD : admin@123
+
+DISM /online /Set-Edition:ServerStandard /ProductKey:D2N9P-3P6X9-2R39C-7RTCD-MDVJX /AcceptEula
+slmgr /skms kms.digiboy.ir
+slmgr /ato
 
